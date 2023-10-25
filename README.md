@@ -2,7 +2,7 @@
 editor: visual
 ---
 
-# Putting It All Together Project on [Name of Research Project]
+# Putting It All Together Project on Mental Health and Screen Time
 
 # Introduction
 
@@ -10,12 +10,12 @@ Throughout the the term, you will be working to build up an analysis of a specif
 
 ## Research Topic:
 
-Describe research topic
+For this research project, we will use data from the Youth Risk Behavioral Surveillance System to examine the relationship between mental health and screen time among adolescents. We will also examine how this relationship varies by the amount of physical activity that an adolescent has.
 
 ### Research questions
 
-1.  x related to y
-2.  contextual variable
+1.  How is the amount of time that an adolescent is on screens/devices related to their mental health and well-being?
+2.  How does the relationship between screen time and mental health vary by the amount of physical activity?
 
 ## Technical Details
 
