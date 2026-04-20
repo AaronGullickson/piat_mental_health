@@ -18,7 +18,8 @@ execute:
 ## code.
 load("input/yrbs.RData")
 library(ggplot2)
-library(texreg)
+library(tibble)
+library(modelsummary)
 ```
 
 ## Introduction
@@ -40,18 +41,18 @@ Describe the dataset being used in your own words. Describe the key variables an
 
 Describe the bivariate association between your key variables, using graphs and statistics.
 
-```{r fig.cap="A Caption"}
+```{r}
 #| label: fig-put-another-unique-name
 #| fig-cap: Put a caption here
 
 #code (e.g. plot, hist, barplot, boxplot) to produce the figure
 ```
 
-Describe the results of the full multivariate regression models. You can use the code chunk template below to place the regression results into a nice format using the texreg package. This code chunk is initially set to not run when this document is rendered. Change `eval: false` to `eval: true` to allow it to run.
+Describe the results of the full multivariate regression models. You can use the code chunk template below to place the regression results into a nice format using the modelsummary package. This code chunk is initially set to not run when this document is rendered. Change `eval: false` to `eval: true` to allow it to run.
 
 ```{r}
-#| label: reg-results
-#| results: asis
+#| label: tbl-model-results
+#| tbl-cap: Put a caption here
 #| eval: false
 
 # IMPORTANT: change eval to true above when you are ready to run
@@ -63,22 +64,17 @@ model2 <- lm()
 model3 <- lm()
 model4 <- lm()
 
-# change from screenreg to texreg for rendering
-screenreg(list(model1, model2, model3, model4),
-        caption="A caption",
-        caption.above = TRUE,
-        #Comment out custom.coef.names until your models are ready for knitting
-        #custom.coef.names = c("Intercept",
-        #                       "names",
-        #                      "of",
-        #                       "each",
-        #                       "line",
-        #                       "of",
-        #                       "table"),
-        custom.gof.names = c("R-squared","N"),
-        digits=2,
-        include.adjrs=FALSE, include.rmse=FALSE,
-        custom.note = "%stars. Standard errors in parenthesis.")
+modelsummary(list(model1, model2, model3, model4), 
+             output = "gt",
+             stars = c("*" = 0.05,"**" = 0.01, "***" = 0.001),
+             # Comment out coef_map until you have your models finalized. All 
+             # names on the left must match exact names from coef command. 
+             # Confirm that all variables are showing in  the final table.
+             #coef_map = c("(Intercept)" = "Intercept",
+             #             "Variable_Name" = "Variable Label",
+             #             ...),
+             gof_map = c("nobs", "r.squared"),
+             notes = "Standard errors shown in parenthesis")
 ```
 
 A discussion of the results of your table should go here, **not** in conclusions.
