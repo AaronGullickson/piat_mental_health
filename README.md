@@ -19,7 +19,7 @@ For this research project, we will use data from the Youth Risk Behavioral Surve
 
 ## Technical Details
 
-We will be using [Quarto](https://quarto.org/) to write the actual reports as pdf documents. You should read in full the instructions for using Quarto on the Canvas page. Quarto will allow you to create professional quality reports with your tables and figures fully integrated. In this project, you will find a `full_report.qmd` quarto file that you will use to produce your report. All assignments should be completed by knitting this report to PDF and submitting the PDF on Canvas.
+We will be using [Quarto](https://quarto.org/) to write the actual reports as pdf documents. You should read in full the instructions for using Quarto on the Canvas page. Quarto will allow you to create professional quality reports with your tables and figures fully integrated. In this project, you will find a `full_report.qmd` quarto file that you will use to produce your report. All assignments should be completed by rendering this report to PDF and submitting the PDF on Canvas.
 
 You can learn more about the dataset that you will be using by opening the DATA_SOURCE.md in the input directory, where you will also find the actual RData file itself.
 
@@ -33,7 +33,7 @@ Please keep the following guidelines in mind for all project reports:
 
 ## Assignment 1: Introduction and Data
 
-In this assignment, we will write an introduction for the report and begin the analysis of the data. You should use Introduction and Data sections of the `full_report.qmd` file. You will also want to be sure to read the information about the variables and dataset provided in the DATA_SOURCE file in the `input` directory.
+In this assignment, we will write an introduction for the report and begin the analysis of the data. You should use Introduction and Data sections of the `full_report.qmd` file. You will also want to be sure to read the information about the variables and dataset provided in the DATA_SOURCE file in the `input` directory, and follow any links in that file to learn more about the data sources from the online sources.
 
 1.  Write an introduction. This introduction should include a statement of the research question (in your own words) and a justification for why it is important to know the answer to this research question. Use your sociological imagination for the justification. The introduction should be 1-2 paragraphs.
 2.  Complete the data section of the research paper. The data section should include an overall description of the dataset (in your own words) being used to analyze the data as well as a description of the key variables used in the analysis. These key variables include the dependent (outcome) variable, the independent variable that is our primary explanatory variable as well as the variable we are considering as the contextual variable. All of these variables are identified in your research question above. You should include figures showing the distribution of each of these key variables as well as text that describes any key features of these distributions.
@@ -53,7 +53,7 @@ When you have completed the assignment, render your report to PDF and upload it 
 
 You will now complete your report. In order to do that you should do the following.
 
-1.  Develop nested models that begin with your key variable and then add other variables in your dataset as controls to see how robust the result is to such controls. You should include at least two models (one with no controls and one with full controls), but you should also consider adding control variables in thematic blocks as this may help illuminate what variables are changing the relationship. You should also add a final model with an interaction term between your key independent variable and the contextual variable. Report your results in a regression model table using `texreg` and describe the results in words.
+1.  Develop nested models that begin with your key variable and then add other variables in your dataset as controls to see how robust the result is to such controls. You should include at least two models (one with no controls and one with full controls), but you should also consider adding control variables in thematic blocks as this may help illuminate what variables are changing the relationship. You should also add a final model with an interaction term between your key independent variable and the contextual variable. Report your results in a regression model table using `modelsummary` and describe the results in words.
 2.  Make corrections to all previous parts of the report based on instructor feedback and in order to maintain a consistent narrative.
 3.  Add a conclusion (1-2 paragraphs) that describes your ultimate findings as well as any weaknesses or concerns you have about the analysis and/or data.
 
