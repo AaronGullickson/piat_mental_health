@@ -15,4 +15,4 @@ From the full data, I have extracted and recoded the following variables for our
 -   **race**: The reported race of the student in six categories.
 -   **bully_electronic**: The student's yes/no response to a question about whether they have been electronically bullied (i.e. online) in the last 12 months.
 -   **sleep**: The hours of sleep that the student gets on an average school night.
--   **physical_activity**: The number of days out of the past week that the student was physically active for at least one hour.
+-   **physical_activity**: The number of days out of the past week that the student was physically active for at least one hour. This is the key contextual variable.
